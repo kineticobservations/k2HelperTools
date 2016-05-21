@@ -1,5 +1,5 @@
 //
-//  K2HelperTools.swift
+//  K2GCDTools.swift
 //
 //  Created by Kailen & Kathryne Engel on 3/2/16.
 //  Copyright © 2016 K2. All rights reserved.
