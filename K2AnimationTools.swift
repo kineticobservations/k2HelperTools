@@ -1,11 +1,13 @@
 //
-//  K2HelperTools.swift
+//  K2AnimationTools.swift
 //
 //  Created by Kailen & Kathryne Engel on 3/2/16.
 //  Copyright © 2016 K2. All rights reserved.
 //
 //  Animation utility functions
 //
+
+import UIKit
 
 func addAnimationTo (
     layer: CALayer,

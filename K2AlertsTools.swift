@@ -7,6 +7,8 @@
 //  Alert & Notification utility functions
 //
 
+import UIKit
+
 func makeAlertFor (
     forVC: UIViewController,
     title: String,

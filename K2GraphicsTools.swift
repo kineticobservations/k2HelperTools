@@ -7,6 +7,8 @@
 //  Graphics utility functions
 //
 
+import UIKit
+
 func addSimpleGradientToLayer (
     layer: CALayer,
     startColor: UIColor,
