@@ -23,6 +23,8 @@ import Foundation
 // aString.isMatch: true is regex pattern is in string
 // aString.getMatches: returns array of strings that match the regex
 // aString.pluralize: returns an english language pluralization of the end of the string
+// aString.dropFirstWord: returns a string with first word dropped
+// aString.dropLastWord: returns a string with the last word dropped
 ///////////////////////////////////////////////////////////////////////////////////////////
 
 extension String {
@@ -178,5 +180,23 @@ extension String {
             suffix = "s"
         }
         return prefix + (lastChar != lastChar.uppercased() ? suffix : suffix.uppercased())
+    }
+    
+    func dropFirstWord () -> String {
+        var index = 0
+        for i in self.characters {
+            if i == " " {
+                index += 1
+                break
+            }
+            index += 1
+        }
+        return String(self.characters.dropFirst(index))
+    }
+    
+    func dropLastWord () -> String {
+        var str = String(self.characters.reversed())
+        str = str.dropFirstWord()
+        return String(str.characters.reversed())
     }
 }
