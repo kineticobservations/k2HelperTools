@@ -25,6 +25,7 @@ import Foundation
 // aString.pluralize: returns an english language pluralization of the end of the string
 // aString.dropFirstWord: returns a string with first word dropped
 // aString.dropLastWord: returns a string with the last word dropped
+// aString.containsOnly: return a bool for whether the string is only letters
 ///////////////////////////////////////////////////////////////////////////////////////////
 
 extension String {
@@ -198,5 +199,18 @@ extension String {
         var str = String(self.characters.reversed())
         str = str.dropFirstWord()
         return String(str.characters.reversed())
+    }
+    
+    func containsOnlyLetters() -> Bool {
+        var isValid        = false
+        let characterCheck = self.rangeOfCharacter(from: CharacterSet.letters.inverted)
+        
+        if  characterCheck != nil {
+            isValid = false
+        } else {
+            isValid = true
+        }
+        
+        return isValid
     }
 }
