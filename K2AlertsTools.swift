@@ -9,18 +9,18 @@
 
 import UIKit
 
-func makeAlertFor (
-    forVC: UIViewController,
+func makeAlert(
+    for vc: UIViewController,
     title: String,
     message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
         let cancel = UIAlertAction(title: "Ok", style: .Cancel, handler: nil)
         alert.addAction(cancel)
-        forVC.presentViewController(alert, animated: true, completion: nil)
+        vc.presentViewController(alert, animated: true, completion: nil)
 }
 
-func makeAlertWithActionsFor (
-    forVC: UIViewController,
+func makeAlertWithActions(
+    for vc: UIViewController,
     title: String,
     message: String,
     addButtons: (title: String, block: (UIAlertAction->Void))...,
@@ -38,5 +38,5 @@ func makeAlertWithActionsFor (
             alert.addAction(cancel)
         }
         
-        forVC.presentViewController(alert, animated: true, completion: nil)
+        vc.presentViewController(alert, animated: true, completion: nil)
 }
